@@ -31,6 +31,7 @@ RUN set -ex \
       pcre-dev \
  # Build & install
  && cd /tmp/repo \
+ && git submodule update --init \
  && ./autogen.sh \
  && ./configure --prefix=/usr --disable-documentation \
  && make install \
